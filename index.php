@@ -316,7 +316,8 @@ input.invalid {
               <label for="navigation">
                  <img style="width:50px" src="https://icon-library.net/images/globe-icon-white/globe-icon-white-25.jpg">
               </label>
-
+	      
+	      //Menu vlevo
               <nav>
                   <ul>
                       <li>
@@ -336,6 +337,8 @@ input.invalid {
                       </li>
                   </ul>
               </nav>
+	      //Menu vlevo
+	      
             <div class="topmenu_vpravo">
                 <a href="logout">Logout</a>
                 <a id="myBtn">Add video</a>
@@ -343,6 +346,7 @@ input.invalid {
 			</div>
       </div>
     </div>
+    //Modal=vyskakovací okno(upload okno)
     <div id="myModal" class="modal">
 		<!-- Modal content -->
 		<div class="modal-content">
@@ -423,6 +427,9 @@ input.invalid {
 		        </div>
 		</div>
 	</div>
+    //Konec modalu
+	  
+    //Hlavní obsah
     <section>
       <a href="podstranky/all"><h2><span style="color:#2ECC40;">New</span> stuff!</h2></a>
         <div class="owl-carousel owl-theme owl-theme-extend has-center-dots has-middle-nav owl-carousel-example" 
@@ -436,6 +443,7 @@ input.invalid {
            data-rwd="3-3-3-4"
            style=" margin: 0 auto;"
         >    
+	//Tahání jednotlivých videí z databáze
         <?php
         $sql = "SELECT * 
 				FROM videa 
@@ -628,7 +636,7 @@ $('.owl-carousel').owlCarousel({//nastaveni carouselu a responzivity
   }
 })
 
-$('.set_jazyk').on('click', function(e){
+$('.set_jazyk').on('click', function(e){ //Nastavení jazyka po kliknutí na vlajku
     var jazyk = $(this).val();
     $.ajax({
         type: 'POST',
@@ -668,12 +676,12 @@ var n = document.getElementById("option1-no");
 y.style.display = "none";
 n.style.display = "none";
 
-document.getElementById("option1yes").onclick = function () {
+document.getElementById("option1yes").onclick = function () { //Možnost 1. v modalu
   y.style.display = "block";
   n.style.display = "none";
 };
 
-document.getElementById("option1no").onclick = function () {
+document.getElementById("option1no").onclick = function () { //Možnost 2. v modalu
   y.style.display = "none";
   n.style.display = "block";
 };
