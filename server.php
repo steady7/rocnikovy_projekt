@@ -179,20 +179,6 @@ if (isset($_POST['Submit_video'])) {
 
   }
 }
-if (isset($_POST['smajlik-odeslat'])) {
-		$postid = $_POST['smajlik-odeslat'];
-                $smajlik_query = "SELECT * FROM videa WHERE video_id ='$postid' LIMIT 1";
-		$result = mysqli_query($db, $smajlik_query);
-		$row = mysqli_fetch_array($result);
-		$n = $row['video_likes'];
-               
-		mysqli_query($db, "INSERT INTO likes (userid, postid) VALUES (1, $postid)");
-		mysqli_query($db, "UPDATE videa SET video_likes=$n+1 WHERE video_id=$postid");
-
-		echo $n+1;
-                 
-		exit();
-	}
 $videa = mysqli_query($db, "SELECT * FROM videa");
 
 ?>
