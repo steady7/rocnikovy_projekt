@@ -1,0 +1,307 @@
+          * {
+          margin: 0;
+          padding: 0;
+          background: #232323;
+          color: #cdcdcd;
+          font-family: "Avenir Next", "Avenir", sans-serif;
+        }
+        a {
+      		text-decoration:none;
+   		}
+        body, html{
+          height:100%;
+        }
+        body{
+            padding:0;
+            margin:0;
+        }
+        h1, p, li{
+            font-family:'helvetica neue', helvetica, arial, sans-serif;
+            color:white;
+            margin:0 0 1em;
+        }
+        h2 {
+           padding: 10px;
+}
+     
+        section li{
+            margin:0 0 10px;
+        }
+                /* 
+          ##Device = Desktops
+          ##Screen = 1281px to higher resolution desktops
+        */
+
+        @media (min-width: 1281px) {
+          
+          section {
+             padding-left: 150px;
+             padding-right: 150px;
+          }
+          
+        }
+
+        /* 
+          ##Device = Laptops, Desktops
+          ##Screen = B/w 1025px to 1280px
+        */
+
+        @media (min-width: 1025px) and (max-width: 1280px) {
+          
+          section {
+             padding-left: 100px;
+             padding-right: 100px;
+          }       
+        }
+
+        /* 
+          ##Device = Tablets, Ipads (portrait)
+          ##Screen = B/w 768px to 1024px
+        */
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+          
+          section {
+             padding-left: 50px;
+             padding-right: 50px;
+          }
+        }
+        
+        /* 
+          ##Device = Tablets, Ipads (landscape)
+          ##Screen = B/w 768px to 1024px
+        */
+
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+          
+          section {
+             padding-left: 50px;
+             padding-right: 50px;
+          }
+        }
+
+        /* 
+          ##Device = Low Resolution Tablets, Mobiles (Landscape)
+          ##Screen = B/w 481px to 767px
+        */
+
+        @media (min-width: 481px) and (max-width: 767px) {
+          
+          section {
+             padding-left: 0px;
+             padding-right: 0px;
+          }
+          
+        }
+
+        /* 
+          ##Device = Most of the Smartphones Mobiles (Portrait)
+          ##Screen = B/w 320px to 479px
+        */
+
+        @media (min-width: 320px) and (max-width: 480px) {
+          
+          section {
+             padding-left: 0px;
+             padding-right: 0px;
+          }
+          
+        }
+        h1{
+            font-size:2.5em;
+            font-weight:300;
+        }
+        p{
+            font-size:1em;
+            line-height:1.5em;
+        }
+        .wrapper{
+            overflow:hidden;
+        }
+        nav{
+            position:fixed;
+            top:0;
+            left:0;
+            width:200px;
+            height:100%;
+            margin:0 0 0 -250px;
+            -moz-transition:all 200ms ease-in;
+            -webkit-transition:all 200ms ease-in;
+            -o-transition:all 200ms ease-in;
+            transition:all 200ms ease-in;
+            z-index:999;
+        }
+        nav ul{
+            height:100%;
+            padding:0;
+            margin:0;
+            list-style:none;
+            background-color: white;
+            overflow:hidden;
+        }
+        nav li{
+            margin:0;
+            border-bottom: 1px solid black;
+        }
+        nav a{
+            color:black;
+            font-size:1em;
+            font-family:'helvetica neue', helvetica, arial, sans-serif;
+            text-decoration:none;
+            display:block;
+            padding:25px 15px;
+            font-weight:300;
+            letter-spacing:2px;
+            border-bottom:1px solid #333;
+            background-color:white;
+            text-align: center;
+            height:50px;
+        }
+        nav a:hover{
+            background:#111;
+        }
+      .topnav label{
+            display:block;
+            font-family:'helvetica neue', helvetica, arial, sans-serif;
+            font-weight:700;
+            background:#1ea1b8;
+            width:50px;
+            height:50px;
+            line-height:42px;
+            color:#fff;
+            text-align:center;
+            font-size:2em;
+            line-height:1.1em;
+            position:fixed;
+            top:10px;
+            left:10px;
+            -moz-transition:all 200ms ease-in;
+            -webkit-transition:all 200ms ease-in;
+            -o-transition:all 200ms ease-in;
+            transition:all 200ms ease-in;
+            z-index:500;
+        }
+        .topnav input[type="checkbox"]{
+            display:none;
+        }
+        .topnav input[type="checkbox"]:checked ~ nav{
+            margin:0;
+        }
+        .topnav input[type="checkbox"]:checked ~ label{
+            left:220px;
+        }
+
+        .topmenu_vpravo a {
+          float: right;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .owl-theme{
+          
+          .owl-dot{
+            background: gray;
+            border: 1px solid darkgray;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            transition: background 0.2s;
+            display: inline-block;
+            &:hover{
+                background: lightgray;
+            }
+            &.active{
+                background: white;
+            }
+        }
+    .owl-dots{
+        .owl-dot{
+            margin: 0 8px;
+        }
+        &.disabled{
+            .owl-dot{
+                display: none;
+            }
+        }
+    }
+    .owl-nav{
+        display: inline-block;
+        text-align: center;    
+    }
+    .owl-prev, .owl-next{
+        width: 44px;
+        height: 60px;
+        line-height: 60px;
+        background: gray;
+        position: relative;
+        display: inline-block;
+        transition: background color 0.2s;
+        &:hover{
+            background: lightgray;
+        }
+        &.disabled{
+            color: lightgray;
+            background: lightergray;
+        }
+    }
+    .owl-prev{
+        &:before{
+            content: 'prev';
+        }
+    }
+    .owl-next{
+        &:before{
+            content: 'next';
+        }
+    }
+}
+
+
+
+
+.owl-theme-extend{
+    .red-nav{
+        .owl-prev, .owl-next{
+            background: red;
+        }
+    }
+    .red-dot{
+        background: red;
+        &:hover, &.active{
+            background: #ea4f4f;
+        }
+    }
+    .yellow-dot{
+        background: yellow;
+        &:hover, &.active{
+            background: #e3ca3d;
+        }   
+    }
+    &.has-middle-nav{
+        .owl-nav{
+            position: absolute;
+            height: 0;
+            width: 100%;
+            top: 50%;
+            left: 0;
+        }
+        .owl-prev, .owl-next{
+            transform: translateY(-50%);
+            position: absolute;
+        }
+        .owl-prev{
+          left: 0;
+        }
+        .owl-next{
+          right: 0;
+        }
+    }
+    &.has-center-dots{
+        .owl-dots{
+            text-align: center;
+        }
+    }
+}	

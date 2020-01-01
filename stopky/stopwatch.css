@@ -1,0 +1,42 @@
+#stopwatch {
+  background: white;
+}
+#sw-time {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  padding: 25px;
+}
+#sw-rst, #sw-go {
+    width: 100%;
+    padding-top:15px;
+	  padding-bottom: 15px;
+    display: inline-block;
+    background: #aa2f2f;
+    border: 0;
+    color: #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	  border: 1px solid #000;
+}
+    table{
+        background-color: #eee;
+        width: 100%; 
+        border-collapse: collapse;
+        border-spacing: 0; 
+      }
+      td{
+        border: 1px solid #000; height: 30px;   
+        text-align: center;
+        background-color: #DDDDDD; 
+        color:black;
+      }
+      th {
+        width: 33%;
+        font-weight: bold;
+        background: #aa2f2f;
+        border: 1px solid #801818; height: 30px;  
+      }
+
+	
